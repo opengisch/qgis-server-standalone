@@ -1,2 +1,2 @@
 docker build --tag opengisch/qgis-server-standalone .
-docker push
+docker push opengisch/qgis-server-standalone:latest
