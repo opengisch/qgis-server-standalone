@@ -9,12 +9,18 @@ services:
       QGIS_SERVER_IGNORE_BAD_LAYERS: 1
     volumes:
       - ./projects:/io/data:ro
+      # use default PG location so there is no need define it as fcgi_param
+      - ./conf/pg_service.conf:/etc/postgresql-common/pg_service.conf:ro
+      #- ./conf/fonts:/usr/local/share/fonts:ro
+      #- ./projects/svg:/var/lib/qgis/.local/share/QGIS/QGIS3/profiles/default/svg:ro
     build:
       context: .
       dockerfile: Dockerfile
     init: true
     ports:
       - 8001:80
+    networks:
+      - net
     command: >
       bash -c "/usr/bin/xvfb-run -a /usr/bin/qgis_mapserver -l 0 localhost:80"
     depends_on:
