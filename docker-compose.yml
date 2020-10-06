@@ -1,0 +1,53 @@
+version: '3.7'
+services:
+  qgis-server:
+    #image: opengisch/qgis-server-standalone:latest
+    environment:
+      # Limit the maximum size returned by a GetMap
+      QGIS_SERVER_WMS_MAX_HEIGHT: 5000
+      QGIS_SERVER_WMS_MAX_WIDTH: 5000
+      QGIS_SERVER_IGNORE_BAD_LAYERS: 1
+    volumes:
+      - ./projects:/io/data:ro
+    build:
+      context: .
+      dockerfile: Dockerfile
+    init: true
+    ports:
+      - 8001:80
+    command: >
+      bash -c "/usr/bin/xvfb-run -a /usr/bin/qgis_mapserver -l 0 localhost:80"
+    depends_on:
+      - postgis
+
+  postgis:
+    image: kartoza/postgis:11.5-2.8
+    restart: always
+    volumes:
+      - postgis-data:/var/lib/postgresql
+    ports:
+      - 54321:5432
+    networks:
+      - net
+
+  pgadmin:
+    image: dpage/pgadmin4
+    restart: unless-stopped
+    ports:
+      - 50501:80
+    volumes:
+      - ../conf/pg/pg_service.conf:/pgadmin4/.pg_service.conf
+    environment:
+      PGADMIN_DEFAULT_EMAIL: play@opengis.ch
+      PGADMIN_DEFAULT_PASSWORD: ciao
+      PGSERVICEFILE: /pgadmin4/.pg_service.conf
+    networks:
+      - net
+    depends_on:
+      - postgis
+
+volumes:
+  postgis-data:
+
+networks:
+  net:

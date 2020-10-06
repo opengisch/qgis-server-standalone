@@ -1,0 +1,1213 @@
+<!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
+<qgis projectname="citybees_gpkg_simple.qgs" version="3.1.0-Master">
+  <homePath path=""/>
+  <title>citybees_gpkg_simple.qgs</title>
+  <autotransaction active="0"/>
+  <evaluateDefaultValues active="0"/>
+  <trust active="0"/>
+  <projectCrs>
+    <spatialrefsys>
+      <proj4>+proj=somerc +lat_0=46.95240555555556 +lon_0=7.439583333333333 +k_0=1 +x_0=2600000 +y_0=1200000 +ellps=bessel +towgs84=674.374,15.056,405.346,0,0,0,0 +units=m +no_defs</proj4>
+      <srsid>47</srsid>
+      <srid>2056</srid>
+      <authid>EPSG:2056</authid>
+      <description>CH1903+ / LV95</description>
+      <projectionacronym>somerc</projectionacronym>
+      <ellipsoidacronym>bessel</ellipsoidacronym>
+      <geographicflag>false</geographicflag>
+    </spatialrefsys>
+  </projectCrs>
+  <layer-tree-group>
+    <customproperties/>
+    <layer-tree-layer source="./citybees.gpkg|layername=apiary_036bee2c_a341_4b84_b25c_1bea7c01e9c2" expanded="1" name="apiary" id="apiary__offline__1f89f4fd_49da_4eb9_90b3_1f7b5e82840c" providerKey="ogr" checked="Qt::Checked">
+      <customproperties/>
+    </layer-tree-layer>
+    <layer-tree-layer source="./citybees.gpkg|layername=area_60ff9e18_ea5b_4814_a227_157fe79ce94c" expanded="1" name="area" id="area__offline__7633c5f6_c708_4c7a_b84f_1ba0a447bdc8" providerKey="ogr" checked="Qt::Checked">
+      <customproperties/>
+    </layer-tree-layer>
+    <layer-tree-group expanded="1" name="Basemap" mutually-exclusive-child="0" mutually-exclusive="1" checked="Qt::Checked">
+      <customproperties/>
+      <layer-tree-layer source="crs=EPSG:3857&amp;format&amp;type=xyz&amp;url=http://tile.osm.ch/osm-swiss-style/%7Bz%7D/%7Bx%7D/%7By%7D.png&amp;zmax=17&amp;zmin=0" expanded="1" name="osm.ch wmts" id="osm_ch_wmts_69b68051_b715_488e_939b_3a2194ab9aea" providerKey="wms" checked="Qt::Checked">
+        <customproperties/>
+      </layer-tree-layer>
+    </layer-tree-group>
+    <custom-order enabled="0">
+      <item>area__offline__7633c5f6_c708_4c7a_b84f_1ba0a447bdc8</item>
+      <item>apiary__offline__1f89f4fd_49da_4eb9_90b3_1f7b5e82840c</item>
+      <item>osm_ch_wmts_69b68051_b715_488e_939b_3a2194ab9aea</item>
+    </custom-order>
+  </layer-tree-group>
+  <snapping-settings tolerance="0" intersection-snapping="0" enabled="1" type="1" mode="3" unit="2">
+    <individual-layer-settings>
+      <layer-setting tolerance="0" enabled="0" type="1" id="apiary__offline__1f89f4fd_49da_4eb9_90b3_1f7b5e82840c" units="2"/>
+      <layer-setting tolerance="0" enabled="0" type="1" id="area__offline__7633c5f6_c708_4c7a_b84f_1ba0a447bdc8" units="2"/>
+    </individual-layer-settings>
+  </snapping-settings>
+  <relations>
+    <relation referencedLayer="area__offline__7633c5f6_c708_4c7a_b84f_1ba0a447bdc8" name="fk_area" referencingLayer="apiary__offline__1f89f4fd_49da_4eb9_90b3_1f7b5e82840c" id="apiary_036bee2c_a341_4b84_b25c_1bea7c01e9c2_area_id_area_60ff9e18_ea5b_4814_a227_157fe79ce94c_id" strength="Association">
+      <fieldRef referencedField="id" referencingField="area_id"/>
+    </relation>
+  </relations>
+  <mapcanvas name="theMapCanvas" annotationsVisible="1">
+    <units>meters</units>
+    <extent>
+      <xmin>2681349.43590637901797891</xmin>
+      <ymin>1246355.7325697960332036</ymin>
+      <xmax>2685419.99987782398238778</xmax>
+      <ymax>1249002.37422980088740587</ymax>
+    </extent>
+    <rotation>0</rotation>
+    <destinationsrs>
+      <spatialrefsys>
+        <proj4>+proj=somerc +lat_0=46.95240555555556 +lon_0=7.439583333333333 +k_0=1 +x_0=2600000 +y_0=1200000 +ellps=bessel +towgs84=674.374,15.056,405.346,0,0,0,0 +units=m +no_defs</proj4>
+        <srsid>47</srsid>
+        <srid>2056</srid>
+        <authid>EPSG:2056</authid>
+        <description>CH1903+ / LV95</description>
+        <projectionacronym>somerc</projectionacronym>
+        <ellipsoidacronym>bessel</ellipsoidacronym>
+        <geographicflag>false</geographicflag>
+      </spatialrefsys>
+    </destinationsrs>
+    <rendermaptile>0</rendermaptile>
+  </mapcanvas>
+  <legend updateDrawingOrder="true">
+    <legendlayer open="true" drawingOrder="-1" showFeatureCount="0" name="apiary" checked="Qt::Checked">
+      <filegroup open="true" hidden="false">
+        <legendlayerfile layerid="apiary__offline__1f89f4fd_49da_4eb9_90b3_1f7b5e82840c" isInOverview="0" visible="1"/>
+      </filegroup>
+    </legendlayer>
+    <legendlayer open="true" drawingOrder="-1" showFeatureCount="0" name="area" checked="Qt::Checked">
+      <filegroup open="true" hidden="false">
+        <legendlayerfile layerid="area__offline__7633c5f6_c708_4c7a_b84f_1ba0a447bdc8" isInOverview="0" visible="1"/>
+      </filegroup>
+    </legendlayer>
+    <legendgroup open="true" name="Basemap" checked="Qt::Checked">
+      <legendlayer open="true" drawingOrder="-1" showFeatureCount="0" name="osm.ch wmts" checked="Qt::Checked">
+        <filegroup open="true" hidden="false">
+          <legendlayerfile layerid="osm_ch_wmts_69b68051_b715_488e_939b_3a2194ab9aea" isInOverview="0" visible="1"/>
+        </filegroup>
+      </legendlayer>
+    </legendgroup>
+  </legend>
+  <mapViewDocks/>
+  <projectlayers>
+    <maplayer maxScale="0" simplifyMaxScale="1" autoRefreshEnabled="0" readOnly="0" refreshOnNotifyEnabled="0" type="vector" simplifyDrawingTol="1" autoRefreshTime="0" geometry="Point" hasScaleBasedVisibilityFlag="0" labelsEnabled="0" minScale="0" simplifyAlgorithm="0" refreshOnNotifyMessage="" simplifyDrawingHints="0" simplifyLocal="1">
+      <extent>
+        <xmin>2527500</xmin>
+        <ymin>1151520</ymin>
+        <xmax>2635710</xmax>
+        <ymax>1244060</ymax>
+      </extent>
+      <id>apiary__offline__1f89f4fd_49da_4eb9_90b3_1f7b5e82840c</id>
+      <datasource>./citybees.gpkg|layername=apiary_036bee2c_a341_4b84_b25c_1bea7c01e9c2</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>apiary</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=somerc +lat_0=46.95240555555556 +lon_0=7.439583333333333 +k_0=1 +x_0=2600000 +y_0=1200000 +ellps=bessel +towgs84=674.374,15.056,405.346,0,0,0,0 +units=m +no_defs</proj4>
+          <srsid>47</srsid>
+          <srid>2056</srid>
+          <authid>EPSG:2056</authid>
+          <description>CH1903+ / LV95</description>
+          <projectionacronym>somerc</projectionacronym>
+          <ellipsoidacronym>bessel</ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <resourceMetadata>
+        <identifier></identifier>
+        <parentidentifier></parentidentifier>
+        <language></language>
+        <type></type>
+        <title></title>
+        <abstract></abstract>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys>
+            <proj4></proj4>
+            <srsid>0</srsid>
+            <srid>0</srid>
+            <authid></authid>
+            <description></description>
+            <projectionacronym></projectionacronym>
+            <ellipsoidacronym></ellipsoidacronym>
+            <geographicflag>true</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent>
+          <spatial crs="" dimensions="2" maxz="0" minz="0" maxy="0" miny="0" maxx="0" minx="0"/>
+          <temporal>
+            <period>
+              <start></start>
+              <end></end>
+            </period>
+          </temporal>
+        </extent>
+        <contact>
+          <name></name>
+          <organization></organization>
+          <position></position>
+          <voice></voice>
+          <fax></fax>
+          <email></email>
+          <role></role>
+        </contact>
+        <links/>
+      </resourceMetadata>
+      <provider encoding="UTF-8">ogr</provider>
+      <vectorjoins/>
+      <layerDependencies/>
+      <dataDependencies/>
+      <expressionfields/>
+      <map-layer-style-manager current="default">
+        <map-layer-style name="default"/>
+      </map-layer-style-manager>
+      <auxiliaryLayer/>
+      <renderer-v2 forceraster="0" enableorderby="0" symbollevels="0" type="singleSymbol">
+        <symbols>
+          <symbol clip_to_extent="1" name="0" type="marker" alpha="1">
+            <layer pass="0" class="SimpleMarker" enabled="1" locked="0">
+              <prop v="0" k="angle"/>
+              <prop v="255,255,255,255" k="color"/>
+              <prop v="1" k="horizontal_anchor_point"/>
+              <prop v="miter" k="joinstyle"/>
+              <prop v="hexagon" k="name"/>
+              <prop v="0,0" k="offset"/>
+              <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
+              <prop v="MM" k="offset_unit"/>
+              <prop v="250,139,57,255" k="outline_color"/>
+              <prop v="solid" k="outline_style"/>
+              <prop v="1" k="outline_width"/>
+              <prop v="3x:0,0,0,0,0,0" k="outline_width_map_unit_scale"/>
+              <prop v="MM" k="outline_width_unit"/>
+              <prop v="diameter" k="scale_method"/>
+              <prop v="3.8" k="size"/>
+              <prop v="3x:0,0,0,0,0,0" k="size_map_unit_scale"/>
+              <prop v="MM" k="size_unit"/>
+              <prop v="1" k="vertical_anchor_point"/>
+              <data_defined_properties>
+                <Option type="Map">
+                  <Option name="name" type="QString" value=""/>
+                  <Option name="properties"/>
+                  <Option name="type" type="QString" value="collection"/>
+                </Option>
+              </data_defined_properties>
+            </layer>
+          </symbol>
+        </symbols>
+        <rotation/>
+        <sizescale/>
+      </renderer-v2>
+      <customproperties>
+        <property key="embeddedWidgets/count" value="0"/>
+        <property key="isOfflineEditable" value="true"/>
+        <property key="remoteProvider" value="postgres"/>
+        <property key="remoteSource" value="dbname='demo' host=lizmapdemo.opengis.ch port=5432 user='editor1' password='editor1' sslmode=disable key='id' srid=2056 type=Point table=&quot;citybees&quot;.&quot;apiary&quot; (geom) sql="/>
+        <property key="variableNames"/>
+        <property key="variableValues"/>
+      </customproperties>
+      <blendMode>0</blendMode>
+      <featureBlendMode>0</featureBlendMode>
+      <layerOpacity>1</layerOpacity>
+      <SingleCategoryDiagramRenderer attributeLegend="1" diagramType="Histogram">
+        <DiagramCategory penAlpha="255" scaleBasedVisibility="0" minScaleDenominator="0" backgroundColor="#ffffff" scaleDependency="Area" lineSizeScale="3x:0,0,0,0,0,0" minimumSize="0" labelPlacementMethod="XHeight" penColor="#000000" backgroundAlpha="255" rotationOffset="0" penWidth="0" width="15" lineSizeType="MM" height="15" maxScaleDenominator="1e+8" barWidth="5" sizeType="MM" opacity="1" enabled="0" sizeScale="3x:0,0,0,0,0,0" diagramOrientation="Up">
+          <fontProperties description="Cantarell,11,-1,5,50,0,0,0,0,0" style=""/>
+          <attribute field="" color="#000000" label=""/>
+        </DiagramCategory>
+      </SingleCategoryDiagramRenderer>
+      <DiagramLayerSettings zIndex="0" obstacle="0" showAll="1" placement="0" linePlacementFlags="2" priority="0" dist="0">
+        <properties>
+          <Option type="Map">
+            <Option name="name" type="QString" value=""/>
+            <Option name="properties" type="Map">
+              <Option name="positionX" type="Map">
+                <Option name="active" type="bool" value="true"/>
+                <Option name="field" type="QString" value="id"/>
+                <Option name="type" type="int" value="2"/>
+              </Option>
+              <Option name="positionY" type="Map">
+                <Option name="active" type="bool" value="true"/>
+                <Option name="field" type="QString" value="id"/>
+                <Option name="type" type="int" value="2"/>
+              </Option>
+              <Option name="show" type="Map">
+                <Option name="active" type="bool" value="true"/>
+                <Option name="field" type="QString" value="id"/>
+                <Option name="type" type="int" value="2"/>
+              </Option>
+            </Option>
+            <Option name="type" type="QString" value="collection"/>
+          </Option>
+        </properties>
+      </DiagramLayerSettings>
+      <fieldConfiguration>
+        <field name="fid">
+          <editWidget type="TextEdit">
+            <config>
+              <Option type="Map">
+                <Option name="IsMultiline" type="bool" value="false"/>
+                <Option name="UseHtml" type="bool" value="false"/>
+              </Option>
+            </config>
+          </editWidget>
+        </field>
+        <field name="id">
+          <editWidget type="TextEdit">
+            <config>
+              <Option type="Map">
+                <Option name="IsMultiline" type="bool" value="false"/>
+                <Option name="UseHtml" type="bool" value="false"/>
+              </Option>
+            </config>
+          </editWidget>
+        </field>
+        <field name="nbr_of_boxes">
+          <editWidget type="TextEdit">
+            <config>
+              <Option type="Map">
+                <Option name="IsMultiline" type="bool" value="false"/>
+                <Option name="UseHtml" type="bool" value="false"/>
+              </Option>
+            </config>
+          </editWidget>
+        </field>
+        <field name="bee_species">
+          <editWidget type="TextEdit">
+            <config>
+              <Option type="Map">
+                <Option name="IsMultiline" type="bool" value="false"/>
+                <Option name="UseHtml" type="bool" value="false"/>
+              </Option>
+            </config>
+          </editWidget>
+        </field>
+        <field name="bee_amount">
+          <editWidget type="TextEdit">
+            <config>
+              <Option type="Map">
+                <Option name="IsMultiline" type="bool" value="false"/>
+                <Option name="UseHtml" type="bool" value="false"/>
+              </Option>
+            </config>
+          </editWidget>
+        </field>
+        <field name="beekeeper">
+          <editWidget type="TextEdit">
+            <config>
+              <Option type="Map">
+                <Option name="IsMultiline" type="bool" value="false"/>
+                <Option name="UseHtml" type="bool" value="false"/>
+              </Option>
+            </config>
+          </editWidget>
+        </field>
+        <field name="picture">
+          <editWidget type="TextEdit">
+            <config>
+              <Option type="Map">
+                <Option name="IsMultiline" type="bool" value="false"/>
+                <Option name="UseHtml" type="bool" value="false"/>
+              </Option>
+            </config>
+          </editWidget>
+        </field>
+        <field name="disease">
+          <editWidget type="TextEdit">
+            <config>
+              <Option type="Map">
+                <Option name="IsMultiline" type="bool" value="false"/>
+                <Option name="UseHtml" type="bool" value="false"/>
+              </Option>
+            </config>
+          </editWidget>
+        </field>
+        <field name="kind_of_disease">
+          <editWidget type="TextEdit">
+            <config>
+              <Option type="Map">
+                <Option name="IsMultiline" type="bool" value="false"/>
+                <Option name="UseHtml" type="bool" value="false"/>
+              </Option>
+            </config>
+          </editWidget>
+        </field>
+        <field name="review_date">
+          <editWidget type="TextEdit">
+            <config>
+              <Option type="Map">
+                <Option name="IsMultiline" type="bool" value="false"/>
+                <Option name="UseHtml" type="bool" value="false"/>
+              </Option>
+            </config>
+          </editWidget>
+        </field>
+        <field name="reviewer">
+          <editWidget type="TextEdit">
+            <config>
+              <Option type="Map">
+                <Option name="IsMultiline" type="bool" value="false"/>
+                <Option name="UseHtml" type="bool" value="false"/>
+              </Option>
+            </config>
+          </editWidget>
+        </field>
+        <field name="average_harvest">
+          <editWidget type="TextEdit">
+            <config>
+              <Option type="Map">
+                <Option name="IsMultiline" type="bool" value="false"/>
+                <Option name="UseHtml" type="bool" value="false"/>
+              </Option>
+            </config>
+          </editWidget>
+        </field>
+        <field name="area_id">
+          <editWidget type="TextEdit">
+            <config>
+              <Option type="Map">
+                <Option name="IsMultiline" type="bool" value="false"/>
+                <Option name="UseHtml" type="bool" value="false"/>
+              </Option>
+            </config>
+          </editWidget>
+        </field>
+      </fieldConfiguration>
+      <aliases>
+        <alias field="fid" index="0" name=""/>
+        <alias field="id" index="1" name=""/>
+        <alias field="nbr_of_boxes" index="2" name=""/>
+        <alias field="bee_species" index="3" name=""/>
+        <alias field="bee_amount" index="4" name=""/>
+        <alias field="beekeeper" index="5" name=""/>
+        <alias field="picture" index="6" name=""/>
+        <alias field="disease" index="7" name=""/>
+        <alias field="kind_of_disease" index="8" name=""/>
+        <alias field="review_date" index="9" name=""/>
+        <alias field="reviewer" index="10" name=""/>
+        <alias field="average_harvest" index="11" name=""/>
+        <alias field="area_id" index="12" name=""/>
+      </aliases>
+      <excludeAttributesWMS/>
+      <excludeAttributesWFS/>
+      <defaults>
+        <default field="fid" expression="uuid()" applyOnUpdate="0"/>
+        <default field="id" expression="" applyOnUpdate="0"/>
+        <default field="nbr_of_boxes" expression="" applyOnUpdate="0"/>
+        <default field="bee_species" expression="" applyOnUpdate="0"/>
+        <default field="bee_amount" expression="" applyOnUpdate="0"/>
+        <default field="beekeeper" expression="" applyOnUpdate="0"/>
+        <default field="picture" expression="" applyOnUpdate="0"/>
+        <default field="disease" expression="" applyOnUpdate="0"/>
+        <default field="kind_of_disease" expression="" applyOnUpdate="0"/>
+        <default field="review_date" expression="" applyOnUpdate="0"/>
+        <default field="reviewer" expression="" applyOnUpdate="0"/>
+        <default field="average_harvest" expression="" applyOnUpdate="0"/>
+        <default field="area_id" expression="" applyOnUpdate="0"/>
+      </defaults>
+      <constraints>
+        <constraint field="fid" constraints="3" notnull_strength="1" unique_strength="1" exp_strength="0"/>
+        <constraint field="id" constraints="0" notnull_strength="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="nbr_of_boxes" constraints="0" notnull_strength="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="bee_species" constraints="0" notnull_strength="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="bee_amount" constraints="0" notnull_strength="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="beekeeper" constraints="0" notnull_strength="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="picture" constraints="0" notnull_strength="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="disease" constraints="0" notnull_strength="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="kind_of_disease" constraints="0" notnull_strength="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="review_date" constraints="0" notnull_strength="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="reviewer" constraints="0" notnull_strength="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="average_harvest" constraints="0" notnull_strength="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="area_id" constraints="0" notnull_strength="0" unique_strength="0" exp_strength="0"/>
+      </constraints>
+      <constraintExpressions>
+        <constraint field="fid" exp="" desc=""/>
+        <constraint field="id" exp="" desc=""/>
+        <constraint field="nbr_of_boxes" exp="" desc=""/>
+        <constraint field="bee_species" exp="" desc=""/>
+        <constraint field="bee_amount" exp="" desc=""/>
+        <constraint field="beekeeper" exp="" desc=""/>
+        <constraint field="picture" exp="" desc=""/>
+        <constraint field="disease" exp="" desc=""/>
+        <constraint field="kind_of_disease" exp="" desc=""/>
+        <constraint field="review_date" exp="" desc=""/>
+        <constraint field="reviewer" exp="" desc=""/>
+        <constraint field="average_harvest" exp="" desc=""/>
+        <constraint field="area_id" exp="" desc=""/>
+      </constraintExpressions>
+      <attributeactions>
+        <defaultAction key="Canvas" value="{42711070-6c32-4ed8-bfa3-1b1c1127baf9}"/>
+        <actionsetting name="" shortTitle="" type="0" id="{42711070-6c32-4ed8-bfa3-1b1c1127baf9}" action="" capture="0" notificationMessage="" isEnabledOnlyWhenEditable="0" icon="">
+          <actionScope id="Field"/>
+          <actionScope id="Feature"/>
+          <actionScope id="Canvas"/>
+        </actionsetting>
+      </attributeactions>
+      <attributetableconfig sortExpression="" actionWidgetStyle="dropDown" sortOrder="0">
+        <columns>
+          <column name="id" type="field" hidden="0" width="-1"/>
+          <column name="nbr_of_boxes" type="field" hidden="0" width="165"/>
+          <column name="bee_species" type="field" hidden="0" width="164"/>
+          <column name="bee_amount" type="field" hidden="0" width="192"/>
+          <column name="beekeeper" type="field" hidden="0" width="-1"/>
+          <column name="picture" type="field" hidden="0" width="-1"/>
+          <column name="disease" type="field" hidden="0" width="-1"/>
+          <column name="kind_of_disease" type="field" hidden="0" width="188"/>
+          <column name="review_date" type="field" hidden="0" width="-1"/>
+          <column name="reviewer" type="field" hidden="0" width="-1"/>
+          <column type="actions" hidden="1" width="-1"/>
+          <column name="average_harvest" type="field" hidden="0" width="161"/>
+          <column name="area_id" type="field" hidden="0" width="-1"/>
+          <column name="fid" type="field" hidden="0" width="-1"/>
+        </columns>
+      </attributetableconfig>
+      <editform>.</editform>
+      <editforminit/>
+      <editforminitcodesource>0</editforminitcodesource>
+      <editforminitfilepath>../demo_proj_citybees_218</editforminitfilepath>
+      <editforminitcode><![CDATA[# -*- coding: utf-8 -*-
+"""
+QGIS forms can have a Python function that is called when the form is
+opened.
+
+Use this function to add extra logic to your forms.
+
+Enter the name of the function in the "Python Init function"
+field.
+An example follows:
+"""
+from qgis.PyQt.QtWidgets import QWidget
+
+def my_form_open(dialog, layer, feature):
+	geom = feature.geometry()
+	control = dialog.findChild(QWidget, "MyLineEdit")
+]]></editforminitcode>
+      <featformsuppress>0</featformsuppress>
+      <editorlayout>tablayout</editorlayout>
+      <attributeEditorForm>
+        <attributeEditorField showLabel="1" index="3" name="bee_species"/>
+        <attributeEditorField showLabel="1" index="5" name="beekeeper"/>
+      </attributeEditorForm>
+      <editable>
+        <field name="area_id" editable="1"/>
+        <field name="average_harvest" editable="1"/>
+        <field name="bee_amount" editable="1"/>
+        <field name="bee_species" editable="1"/>
+        <field name="beekeeper" editable="1"/>
+        <field name="disease" editable="1"/>
+        <field name="fid" editable="1"/>
+        <field name="id" editable="1"/>
+        <field name="kind_of_disease" editable="1"/>
+        <field name="nbr_of_boxes" editable="1"/>
+        <field name="picture" editable="1"/>
+        <field name="review_date" editable="1"/>
+        <field name="reviewer" editable="1"/>
+      </editable>
+      <labelOnTop>
+        <field labelOnTop="0" name="area_id"/>
+        <field labelOnTop="0" name="average_harvest"/>
+        <field labelOnTop="0" name="bee_amount"/>
+        <field labelOnTop="0" name="bee_species"/>
+        <field labelOnTop="0" name="beekeeper"/>
+        <field labelOnTop="0" name="disease"/>
+        <field labelOnTop="0" name="fid"/>
+        <field labelOnTop="0" name="id"/>
+        <field labelOnTop="0" name="kind_of_disease"/>
+        <field labelOnTop="0" name="nbr_of_boxes"/>
+        <field labelOnTop="0" name="picture"/>
+        <field labelOnTop="0" name="review_date"/>
+        <field labelOnTop="0" name="reviewer"/>
+      </labelOnTop>
+      <widgets>
+        <widget name="ref_apiary_apiary_id_apiary2018_id">
+          <config/>
+        </widget>
+      </widgets>
+      <conditionalstyles>
+        <rowstyles/>
+        <fieldstyles/>
+      </conditionalstyles>
+      <expressionfields/>
+      <previewExpression>id</previewExpression>
+      <mapTip></mapTip>
+    </maplayer>
+    <maplayer maxScale="0" simplifyMaxScale="1" autoRefreshEnabled="0" readOnly="0" refreshOnNotifyEnabled="0" type="vector" simplifyDrawingTol="1" autoRefreshTime="0" geometry="Polygon" hasScaleBasedVisibilityFlag="0" labelsEnabled="1" minScale="0" simplifyAlgorithm="0" refreshOnNotifyMessage="" simplifyDrawingHints="1" simplifyLocal="1">
+      <extent>
+        <xmin>2600490</xmin>
+        <ymin>1114370</ymin>
+        <xmax>2721640</xmax>
+        <ymax>1235880</ymax>
+      </extent>
+      <id>area__offline__7633c5f6_c708_4c7a_b84f_1ba0a447bdc8</id>
+      <datasource>./citybees.gpkg|layername=area_60ff9e18_ea5b_4814_a227_157fe79ce94c</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>area</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=somerc +lat_0=46.95240555555556 +lon_0=7.439583333333333 +k_0=1 +x_0=2600000 +y_0=1200000 +ellps=bessel +towgs84=674.374,15.056,405.346,0,0,0,0 +units=m +no_defs</proj4>
+          <srsid>47</srsid>
+          <srid>2056</srid>
+          <authid>EPSG:2056</authid>
+          <description>CH1903+ / LV95</description>
+          <projectionacronym>somerc</projectionacronym>
+          <ellipsoidacronym>bessel</ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <resourceMetadata>
+        <identifier></identifier>
+        <parentidentifier></parentidentifier>
+        <language></language>
+        <type></type>
+        <title></title>
+        <abstract></abstract>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys>
+            <proj4></proj4>
+            <srsid>0</srsid>
+            <srid>0</srid>
+            <authid></authid>
+            <description></description>
+            <projectionacronym></projectionacronym>
+            <ellipsoidacronym></ellipsoidacronym>
+            <geographicflag>false</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent>
+          <spatial crs="" dimensions="2" maxz="0" minz="0" maxy="0" miny="0" maxx="0" minx="0"/>
+          <temporal>
+            <period>
+              <start></start>
+              <end></end>
+            </period>
+          </temporal>
+        </extent>
+        <contact>
+          <name></name>
+          <organization></organization>
+          <position></position>
+          <voice></voice>
+          <fax></fax>
+          <email></email>
+          <role></role>
+        </contact>
+        <links/>
+      </resourceMetadata>
+      <provider encoding="UTF-8">ogr</provider>
+      <vectorjoins/>
+      <layerDependencies/>
+      <dataDependencies/>
+      <expressionfields/>
+      <map-layer-style-manager current="default">
+        <map-layer-style name="default"/>
+      </map-layer-style-manager>
+      <auxiliaryLayer/>
+      <renderer-v2 forceraster="0" enableorderby="0" symbollevels="0" type="singleSymbol">
+        <symbols>
+          <symbol clip_to_extent="1" name="0" type="fill" alpha="0.72">
+            <layer pass="0" class="GradientFill" enabled="1" locked="0">
+              <prop v="0" k="angle"/>
+              <prop v="66,150,63,255" k="color"/>
+              <prop v="0,0,255,255" k="color1"/>
+              <prop v="0,255,0,255" k="color2"/>
+              <prop v="0" k="color_type"/>
+              <prop v="0" k="coordinate_mode"/>
+              <prop v="0" k="discrete"/>
+              <prop v="102,230,97,255" k="gradient_color2"/>
+              <prop v="0,0" k="offset"/>
+              <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
+              <prop v="MM" k="offset_unit"/>
+              <prop v="gradient" k="rampType"/>
+              <prop v="0.5,0" k="reference_point1"/>
+              <prop v="0" k="reference_point1_iscentroid"/>
+              <prop v="0.5,1" k="reference_point2"/>
+              <prop v="0" k="reference_point2_iscentroid"/>
+              <prop v="0" k="spread"/>
+              <prop v="0" k="type"/>
+              <data_defined_properties>
+                <Option type="Map">
+                  <Option name="name" type="QString" value=""/>
+                  <Option name="properties"/>
+                  <Option name="type" type="QString" value="collection"/>
+                </Option>
+              </data_defined_properties>
+            </layer>
+            <layer pass="0" class="SimpleFill" enabled="1" locked="0">
+              <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
+              <prop v="77,175,74,255" k="color"/>
+              <prop v="bevel" k="joinstyle"/>
+              <prop v="0,0" k="offset"/>
+              <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
+              <prop v="MM" k="offset_unit"/>
+              <prop v="56,128,54,255" k="outline_color"/>
+              <prop v="solid" k="outline_style"/>
+              <prop v="0.26" k="outline_width"/>
+              <prop v="MM" k="outline_width_unit"/>
+              <prop v="no" k="style"/>
+              <data_defined_properties>
+                <Option type="Map">
+                  <Option name="name" type="QString" value=""/>
+                  <Option name="properties"/>
+                  <Option name="type" type="QString" value="collection"/>
+                </Option>
+              </data_defined_properties>
+            </layer>
+          </symbol>
+        </symbols>
+        <rotation/>
+        <sizescale/>
+      </renderer-v2>
+      <labeling type="simple">
+        <settings>
+          <text-style fontStrikeout="0" namedStyle="Regular" fontLetterSpacing="0" fieldName="concat('id: ', id)" fontWordSpacing="0" textColor="0,0,0,255" useSubstitutions="0" fontSizeUnit="Point" isExpression="1" fontSize="10" textOpacity="1" fontUnderline="0" multilineHeight="1" fontCapitals="0" fontItalic="0" previewBkgrdColor="#ffffff" fontWeight="50" fontFamily="Cantarell" blendMode="0" fontSizeMapUnitScale="3x:0,0,0,0,0,0">
+            <text-buffer bufferNoFill="1" bufferBlendMode="0" bufferSizeUnits="MM" bufferDraw="0" bufferSizeMapUnitScale="3x:0,0,0,0,0,0" bufferColor="255,255,255,255" bufferSize="1" bufferOpacity="1" bufferJoinStyle="128"/>
+            <background shapeOpacity="1" shapeOffsetX="0" shapeSizeType="0" shapeOffsetMapUnitScale="3x:0,0,0,0,0,0" shapeBlendMode="0" shapeDraw="0" shapeOffsetUnit="MM" shapeType="0" shapeRadiiY="0" shapeJoinStyle="64" shapeBorderWidthMapUnitScale="3x:0,0,0,0,0,0" shapeBorderWidthUnit="MM" shapeBorderWidth="0" shapeSizeY="0" shapeRotation="0" shapeOffsetY="0" shapeRotationType="0" shapeBorderColor="128,128,128,255" shapeSizeMapUnitScale="3x:0,0,0,0,0,0" shapeRadiiX="0" shapeRadiiMapUnitScale="3x:0,0,0,0,0,0" shapeFillColor="255,255,255,255" shapeRadiiUnit="MM" shapeSizeX="0" shapeSizeUnit="MM" shapeSVGFile=""/>
+            <shadow shadowScale="100" shadowUnder="0" shadowOffsetUnit="MM" shadowColor="0,0,0,255" shadowRadius="1.5" shadowRadiusUnit="MM" shadowOffsetMapUnitScale="3x:0,0,0,0,0,0" shadowOffsetAngle="135" shadowRadiusAlphaOnly="0" shadowBlendMode="6" shadowDraw="0" shadowOffsetDist="1" shadowOpacity="0.7" shadowOffsetGlobal="1" shadowRadiusMapUnitScale="3x:0,0,0,0,0,0"/>
+            <substitutions/>
+          </text-style>
+          <text-format multilineAlign="4294967295" leftDirectionSymbol="&lt;" decimals="3" wrapChar="" plussign="0" reverseDirectionSymbol="0" placeDirectionSymbol="0" formatNumbers="0" rightDirectionSymbol=">" addDirectionSymbol="0"/>
+          <placement priority="5" distMapUnitScale="3x:0,0,0,0,0,0" centroidInside="0" predefinedPositionOrder="TR,TL,BR,BL,R,L,TSR,BSR" maxCurvedCharAngleOut="-25" preserveRotation="1" repeatDistanceMapUnitScale="3x:0,0,0,0,0,0" fitInPolygonOnly="0" repeatDistance="0" labelOffsetMapUnitScale="3x:0,0,0,0,0,0" rotationAngle="0" placement="0" placementFlags="10" quadOffset="4" offsetType="0" xOffset="0" dist="0" centroidWhole="0" maxCurvedCharAngleIn="25" distUnits="MM" repeatDistanceUnits="MM" offsetUnits="MM" yOffset="0"/>
+          <rendering fontLimitPixelSize="0" obstacleFactor="1" scaleMax="0" drawLabels="1" fontMinPixelSize="3" labelPerPart="0" limitNumLabels="0" upsidedownLabels="0" zIndex="0" minFeatureSize="0" fontMaxPixelSize="10000" maxNumLabels="2000" mergeLines="0" scaleMin="0" displayAll="0" scaleVisibility="0" obstacle="1" obstacleType="0"/>
+          <dd_properties>
+            <Option type="Map">
+              <Option name="name" type="QString" value=""/>
+              <Option name="properties"/>
+              <Option name="type" type="QString" value="collection"/>
+            </Option>
+          </dd_properties>
+        </settings>
+      </labeling>
+      <customproperties>
+        <property key="embeddedWidgets/count" value="0"/>
+        <property key="isOfflineEditable" value="true"/>
+        <property key="remoteProvider" value="postgres"/>
+        <property key="remoteSource" value="dbname='demo' host=lizmapdemo.opengis.ch port=5432 user='editor1' password='editor1' sslmode=disable key='id' srid=2056 type=Polygon table=&quot;citybees&quot;.&quot;area&quot; (geom) sql="/>
+        <property key="variableNames"/>
+        <property key="variableValues"/>
+      </customproperties>
+      <blendMode>0</blendMode>
+      <featureBlendMode>0</featureBlendMode>
+      <layerOpacity>1</layerOpacity>
+      <SingleCategoryDiagramRenderer attributeLegend="1" diagramType="Histogram">
+        <DiagramCategory penAlpha="255" scaleBasedVisibility="0" minScaleDenominator="0" backgroundColor="#ffffff" scaleDependency="Area" lineSizeScale="3x:0,0,0,0,0,0" minimumSize="0" labelPlacementMethod="XHeight" penColor="#000000" backgroundAlpha="255" rotationOffset="0" penWidth="0" width="15" lineSizeType="MM" height="15" maxScaleDenominator="1e+8" barWidth="5" sizeType="MM" opacity="1" enabled="0" sizeScale="3x:0,0,0,0,0,0" diagramOrientation="Up">
+          <fontProperties description="Cantarell,11,-1,5,50,0,0,0,0,0" style=""/>
+          <attribute field="" color="#000000" label=""/>
+        </DiagramCategory>
+      </SingleCategoryDiagramRenderer>
+      <DiagramLayerSettings zIndex="0" obstacle="0" showAll="1" placement="0" linePlacementFlags="2" priority="0" dist="0">
+        <properties>
+          <Option type="Map">
+            <Option name="name" type="QString" value=""/>
+            <Option name="properties" type="Map">
+              <Option name="positionX" type="Map">
+                <Option name="active" type="bool" value="true"/>
+                <Option name="field" type="QString" value="id"/>
+                <Option name="type" type="int" value="2"/>
+              </Option>
+              <Option name="positionY" type="Map">
+                <Option name="active" type="bool" value="true"/>
+                <Option name="field" type="QString" value="id"/>
+                <Option name="type" type="int" value="2"/>
+              </Option>
+              <Option name="show" type="Map">
+                <Option name="active" type="bool" value="true"/>
+                <Option name="field" type="QString" value="id"/>
+                <Option name="type" type="int" value="2"/>
+              </Option>
+            </Option>
+            <Option name="type" type="QString" value="collection"/>
+          </Option>
+        </properties>
+      </DiagramLayerSettings>
+      <fieldConfiguration>
+        <field name="fid">
+          <editWidget type="TextEdit">
+            <config>
+              <Option type="Map">
+                <Option name="IsMultiline" type="bool" value="false"/>
+                <Option name="UseHtml" type="bool" value="false"/>
+              </Option>
+            </config>
+          </editWidget>
+        </field>
+        <field name="id">
+          <editWidget type="TextEdit">
+            <config>
+              <Option type="Map">
+                <Option name="IsMultiline" type="bool" value="false"/>
+                <Option name="UseHtml" type="bool" value="false"/>
+              </Option>
+            </config>
+          </editWidget>
+        </field>
+        <field name="proprietor">
+          <editWidget type="TextEdit">
+            <config>
+              <Option type="Map">
+                <Option name="IsMultiline" type="bool" value="false"/>
+                <Option name="UseHtml" type="bool" value="false"/>
+              </Option>
+            </config>
+          </editWidget>
+        </field>
+        <field name="plant_species">
+          <editWidget type="TextEdit">
+            <config>
+              <Option type="Map">
+                <Option name="IsMultiline" type="bool" value="false"/>
+                <Option name="UseHtml" type="bool" value="false"/>
+              </Option>
+            </config>
+          </editWidget>
+        </field>
+        <field name="picture">
+          <editWidget type="TextEdit">
+            <config>
+              <Option type="Map">
+                <Option name="IsMultiline" type="bool" value="false"/>
+                <Option name="UseHtml" type="bool" value="false"/>
+              </Option>
+            </config>
+          </editWidget>
+        </field>
+        <field name="review_date">
+          <editWidget type="TextEdit">
+            <config>
+              <Option type="Map">
+                <Option name="IsMultiline" type="bool" value="false"/>
+                <Option name="UseHtml" type="bool" value="false"/>
+              </Option>
+            </config>
+          </editWidget>
+        </field>
+        <field name="reviewer">
+          <editWidget type="TextEdit">
+            <config>
+              <Option type="Map">
+                <Option name="IsMultiline" type="bool" value="false"/>
+                <Option name="UseHtml" type="bool" value="false"/>
+              </Option>
+            </config>
+          </editWidget>
+        </field>
+      </fieldConfiguration>
+      <aliases>
+        <alias field="fid" index="0" name=""/>
+        <alias field="id" index="1" name=""/>
+        <alias field="proprietor" index="2" name=""/>
+        <alias field="plant_species" index="3" name=""/>
+        <alias field="picture" index="4" name=""/>
+        <alias field="review_date" index="5" name=""/>
+        <alias field="reviewer" index="6" name=""/>
+      </aliases>
+      <excludeAttributesWMS/>
+      <excludeAttributesWFS/>
+      <defaults>
+        <default field="fid" expression="uuid()" applyOnUpdate="0"/>
+        <default field="id" expression="" applyOnUpdate="0"/>
+        <default field="proprietor" expression="" applyOnUpdate="0"/>
+        <default field="plant_species" expression="" applyOnUpdate="0"/>
+        <default field="picture" expression="" applyOnUpdate="0"/>
+        <default field="review_date" expression="" applyOnUpdate="0"/>
+        <default field="reviewer" expression="" applyOnUpdate="0"/>
+      </defaults>
+      <constraints>
+        <constraint field="fid" constraints="3" notnull_strength="1" unique_strength="1" exp_strength="0"/>
+        <constraint field="id" constraints="0" notnull_strength="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="proprietor" constraints="0" notnull_strength="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="plant_species" constraints="0" notnull_strength="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="picture" constraints="0" notnull_strength="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="review_date" constraints="0" notnull_strength="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="reviewer" constraints="0" notnull_strength="0" unique_strength="0" exp_strength="0"/>
+      </constraints>
+      <constraintExpressions>
+        <constraint field="fid" exp="" desc=""/>
+        <constraint field="id" exp="" desc=""/>
+        <constraint field="proprietor" exp="" desc=""/>
+        <constraint field="plant_species" exp="" desc=""/>
+        <constraint field="picture" exp="" desc=""/>
+        <constraint field="review_date" exp="" desc=""/>
+        <constraint field="reviewer" exp="" desc=""/>
+      </constraintExpressions>
+      <attributeactions>
+        <defaultAction key="Canvas" value="{2a96ba24-396e-48d8-b1f7-444cfea79292}"/>
+        <actionsetting name="" shortTitle="" type="0" id="{2a96ba24-396e-48d8-b1f7-444cfea79292}" action="" capture="0" notificationMessage="" isEnabledOnlyWhenEditable="0" icon="">
+          <actionScope id="Field"/>
+          <actionScope id="Feature"/>
+          <actionScope id="Canvas"/>
+        </actionsetting>
+      </attributeactions>
+      <attributetableconfig sortExpression="" actionWidgetStyle="dropDown" sortOrder="0">
+        <columns>
+          <column name="id" type="field" hidden="0" width="-1"/>
+          <column name="proprietor" type="field" hidden="0" width="-1"/>
+          <column name="plant_species" type="field" hidden="0" width="-1"/>
+          <column name="picture" type="field" hidden="0" width="-1"/>
+          <column name="review_date" type="field" hidden="0" width="-1"/>
+          <column name="reviewer" type="field" hidden="0" width="-1"/>
+          <column type="actions" hidden="1" width="-1"/>
+          <column name="fid" type="field" hidden="0" width="-1"/>
+        </columns>
+      </attributetableconfig>
+      <editform>.</editform>
+      <editforminit/>
+      <editforminitcodesource>0</editforminitcodesource>
+      <editforminitfilepath>../demo_proj_citybees_218</editforminitfilepath>
+      <editforminitcode><![CDATA[# -*- coding: utf-8 -*-
+"""
+QGIS forms can have a Python function that is called when the form is
+opened.
+
+Use this function to add extra logic to your forms.
+
+Enter the name of the function in the "Python Init function"
+field.
+An example follows:
+"""
+from qgis.PyQt.QtWidgets import QWidget
+
+def my_form_open(dialog, layer, feature):
+	geom = feature.geometry()
+	control = dialog.findChild(QWidget, "MyLineEdit")
+]]></editforminitcode>
+      <featformsuppress>0</featformsuppress>
+      <editorlayout>tablayout</editorlayout>
+      <attributeEditorForm>
+        <attributeEditorField showLabel="1" index="3" name="plant_species"/>
+      </attributeEditorForm>
+      <editable>
+        <field name="fid" editable="1"/>
+        <field name="id" editable="1"/>
+        <field name="picture" editable="1"/>
+        <field name="plant_species" editable="1"/>
+        <field name="proprietor" editable="1"/>
+        <field name="review_date" editable="1"/>
+        <field name="reviewer" editable="1"/>
+      </editable>
+      <labelOnTop>
+        <field labelOnTop="0" name="fid"/>
+        <field labelOnTop="0" name="id"/>
+        <field labelOnTop="0" name="picture"/>
+        <field labelOnTop="0" name="plant_species"/>
+        <field labelOnTop="0" name="proprietor"/>
+        <field labelOnTop="0" name="review_date"/>
+        <field labelOnTop="0" name="reviewer"/>
+      </labelOnTop>
+      <widgets>
+        <widget name="apiary2018_area_id_area201805_id">
+          <config/>
+        </widget>
+        <widget name="apiary_036bee2c_a341_4b84_b25c_1bea7c01e9c2_area_id_area_60ff9e18_ea5b_4814_a227_157fe79ce94c_id">
+          <config type="Map">
+            <Option name="nm-rel" type="QString" value=""/>
+          </config>
+        </widget>
+        <widget name="ref_apiary_area_id_area201805_id">
+          <config/>
+        </widget>
+      </widgets>
+      <conditionalstyles>
+        <rowstyles/>
+        <fieldstyles/>
+      </conditionalstyles>
+      <expressionfields/>
+      <previewExpression>id</previewExpression>
+      <mapTip></mapTip>
+    </maplayer>
+    <maplayer maxScale="0" autoRefreshEnabled="0" refreshOnNotifyEnabled="0" type="raster" autoRefreshTime="0" hasScaleBasedVisibilityFlag="0" minScale="1e+8" refreshOnNotifyMessage="">
+      <extent>
+        <xmin>-20037508.34278924390673637</xmin>
+        <ymin>-20037508.34278925508260727</ymin>
+        <xmax>20037508.34278924390673637</xmax>
+        <ymax>20037508.34278924390673637</ymax>
+      </extent>
+      <id>osm_ch_wmts_69b68051_b715_488e_939b_3a2194ab9aea</id>
+      <datasource>crs=EPSG:3857&amp;format&amp;type=xyz&amp;url=http://tile.osm.ch/osm-swiss-style/%7Bz%7D/%7Bx%7D/%7By%7D.png&amp;zmax=17&amp;zmin=0</datasource>
+      <shortname>osm_ch_wmts</shortname>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>osm.ch wmts</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs</proj4>
+          <srsid>3857</srsid>
+          <srid>3857</srid>
+          <authid>EPSG:3857</authid>
+          <description>WGS 84 / Pseudo Mercator</description>
+          <projectionacronym>merc</projectionacronym>
+          <ellipsoidacronym>WGS84</ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <resourceMetadata>
+        <identifier></identifier>
+        <parentidentifier></parentidentifier>
+        <language></language>
+        <type></type>
+        <title></title>
+        <abstract></abstract>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys>
+            <proj4></proj4>
+            <srsid>0</srsid>
+            <srid>0</srid>
+            <authid></authid>
+            <description></description>
+            <projectionacronym></projectionacronym>
+            <ellipsoidacronym></ellipsoidacronym>
+            <geographicflag>false</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent>
+          <spatial crs="" dimensions="2" maxz="0" minz="0" maxy="0" miny="0" maxx="0" minx="0"/>
+          <temporal>
+            <period>
+              <start></start>
+              <end></end>
+            </period>
+          </temporal>
+        </extent>
+        <contact>
+          <name></name>
+          <organization></organization>
+          <position></position>
+          <voice></voice>
+          <fax></fax>
+          <email></email>
+          <role></role>
+        </contact>
+        <links/>
+      </resourceMetadata>
+      <customproperties>
+        <property key="QFieldSync/action" value="remove"/>
+        <property key="WMSBackgroundLayer" value="false"/>
+        <property key="WMSPublishDataSourceUrl" value="false"/>
+        <property key="embeddedWidgets/count" value="0"/>
+        <property key="identify/format" value="Undefined"/>
+      </customproperties>
+      <provider>wms</provider>
+      <noData>
+        <noDataList bandNo="1" useSrcNoData="0"/>
+      </noData>
+      <map-layer-style-manager current="default">
+        <map-layer-style name="default"/>
+      </map-layer-style-manager>
+      <pipe>
+        <rasterrenderer opacity="1" band="1" alphaBand="-1" type="singlebandcolordata">
+          <rasterTransparency/>
+          <minMaxOrigin>
+            <limits>None</limits>
+            <extent>WholeRaster</extent>
+            <statAccuracy>Estimated</statAccuracy>
+            <cumulativeCutLower>0.02</cumulativeCutLower>
+            <cumulativeCutUpper>0.98</cumulativeCutUpper>
+            <stdDevFactor>2</stdDevFactor>
+          </minMaxOrigin>
+        </rasterrenderer>
+        <brightnesscontrast contrast="0" brightness="0"/>
+        <huesaturation colorizeStrength="100" saturation="0" colorizeOn="0" colorizeBlue="128" colorizeRed="255" grayscaleMode="0" colorizeGreen="128"/>
+        <rasterresampler maxOversampling="2"/>
+      </pipe>
+      <blendMode>0</blendMode>
+    </maplayer>
+  </projectlayers>
+  <layerorder>
+    <layer id="area__offline__7633c5f6_c708_4c7a_b84f_1ba0a447bdc8"/>
+    <layer id="apiary__offline__1f89f4fd_49da_4eb9_90b3_1f7b5e82840c"/>
+    <layer id="osm_ch_wmts_69b68051_b715_488e_939b_3a2194ab9aea"/>
+  </layerorder>
+  <properties>
+    <WMSOnlineResource type="QString">http://www.opengis.ch</WMSOnlineResource>
+    <qfieldsync>
+      <baseMapType type="QString">singleLayer</baseMapType>
+      <offlineCopyOnlyAoi type="int">0</offlineCopyOnlyAoi>
+      <baseMapTheme type="QString"></baseMapTheme>
+      <baseMapMupp type="double">10</baseMapMupp>
+      <baseMapLayer type="QString">osm_ch_wmts_69b68051_b715_488e_939b_3a2194ab9aea</baseMapLayer>
+      <baseMapTileSize type="int">1024</baseMapTileSize>
+      <createBaseMap type="int">1</createBaseMap>
+    </qfieldsync>
+    <WMSAddWktGeometry type="bool">false</WMSAddWktGeometry>
+    <WMSSegmentizeFeatureInfoGeometry type="bool">false</WMSSegmentizeFeatureInfoGeometry>
+    <WFSLayersPrecision>
+      <area20180528091231769 type="int">8</area20180528091231769>
+      <apiary_036bee2c_a341_4b84_b25c_1bea7c01e9c2 type="int">8</apiary_036bee2c_a341_4b84_b25c_1bea7c01e9c2>
+      <landscape20180528133548194 type="int">8</landscape20180528133548194>
+      <buildings20180528134018299 type="int">8</buildings20180528134018299>
+      <area_60ff9e18_ea5b_4814_a227_157fe79ce94c type="int">8</area_60ff9e18_ea5b_4814_a227_157fe79ce94c>
+      <apiary20180528091231748 type="int">8</apiary20180528091231748>
+      <landscape20180531094713934 type="int">8</landscape20180531094713934>
+      <lines20180528144355951 type="int">8</lines20180528144355951>
+    </WFSLayersPrecision>
+    <Paths>
+      <Absolute type="bool">false</Absolute>
+    </Paths>
+    <WMSRequestDefinedDataSources type="bool">false</WMSRequestDefinedDataSources>
+    <WMSPrecision type="QString">8</WMSPrecision>
+    <WMSUseLayerIDs type="bool">false</WMSUseLayerIDs>
+    <WMSCrsList type="QStringList">
+      <value>EPSG:4326</value>
+      <value>EPSG:2056</value>
+    </WMSCrsList>
+    <WMSAccessConstraints type="QString">None</WMSAccessConstraints>
+    <WMSFees type="QString">no conditions apply</WMSFees>
+    <PositionPrecision>
+      <Automatic type="bool">true</Automatic>
+      <DegreeFormat type="QString">MU</DegreeFormat>
+      <DecimalPlaces type="int">2</DecimalPlaces>
+    </PositionPrecision>
+    <WMSServiceCapabilities type="bool">true</WMSServiceCapabilities>
+    <Digitizing>
+      <AvoidIntersectionsList type="QStringList"/>
+      <DefaultSnapTolerance type="double">0</DefaultSnapTolerance>
+      <LayerSnappingList type="QStringList">
+        <value>apiary20180528091231748</value>
+        <value>area20180528091231769</value>
+        <value>buildings20180528134018299</value>
+        <value>lines20180528144355951</value>
+        <value>landscape20180531094713934</value>
+      </LayerSnappingList>
+      <SnappingMode type="QString">advanced</SnappingMode>
+      <LayerSnappingToleranceList type="QStringList">
+        <value>0.000000</value>
+        <value>0.000000</value>
+        <value>0.000000</value>
+        <value>0.000000</value>
+        <value>0.000000</value>
+      </LayerSnappingToleranceList>
+      <DefaultSnapType type="QString">off</DefaultSnapType>
+      <LayerSnappingToleranceUnitList type="QStringList">
+        <value>2</value>
+        <value>2</value>
+        <value>2</value>
+        <value>2</value>
+        <value>2</value>
+      </LayerSnappingToleranceUnitList>
+      <LayerSnappingEnabledList type="QStringList">
+        <value>disabled</value>
+        <value>disabled</value>
+        <value>disabled</value>
+        <value>disabled</value>
+        <value>disabled</value>
+      </LayerSnappingEnabledList>
+      <LayerSnapToList type="QStringList">
+        <value>to_vertex_and_segment</value>
+        <value>to_vertex_and_segment</value>
+        <value>to_vertex_and_segment</value>
+        <value>to_vertex_and_segment</value>
+        <value>to_vertex_and_segment</value>
+      </LayerSnapToList>
+      <DefaultSnapToleranceUnit type="int">2</DefaultSnapToleranceUnit>
+    </Digitizing>
+    <WMSRestrictedComposers type="QStringList"/>
+    <WMSRestrictedLayers type="QStringList"/>
+    <SpatialRefSys>
+      <ProjectCRSProj4String type="QString">+proj=somerc +lat_0=46.95240555555556 +lon_0=7.439583333333333 +k_0=1 +x_0=2600000 +y_0=1200000 +ellps=bessel +towgs84=674.374,15.056,405.346,0,0,0,0 +units=m +no_defs</ProjectCRSProj4String>
+      <ProjectionsEnabled type="int">1</ProjectionsEnabled>
+      <ProjectCRSID type="int">47</ProjectCRSID>
+      <ProjectCrs type="QString">EPSG:2056</ProjectCrs>
+    </SpatialRefSys>
+    <WMSServiceAbstract type="QString"></WMSServiceAbstract>
+    <OfflineEditingPlugin>
+      <OfflineDbPath type="QString">./citybees.gpkg</OfflineDbPath>
+    </OfflineEditingPlugin>
+    <PAL>
+      <ShowingPartialsLabels type="bool">true</ShowingPartialsLabels>
+      <CandidatesPoint type="int">16</CandidatesPoint>
+      <DrawRectOnly type="bool">false</DrawRectOnly>
+      <DrawOutlineLabels type="bool">true</DrawOutlineLabels>
+      <SearchMethod type="int">0</SearchMethod>
+      <ShowingCandidates type="bool">false</ShowingCandidates>
+      <ShowingAllLabels type="bool">false</ShowingAllLabels>
+      <CandidatesPolygon type="int">30</CandidatesPolygon>
+      <CandidatesLine type="int">50</CandidatesLine>
+    </PAL>
+    <WFSTLayers>
+      <Insert type="QStringList"/>
+      <Update type="QStringList"/>
+      <Delete type="QStringList"/>
+    </WFSTLayers>
+    <WFSUrl type="QString"></WFSUrl>
+    <DefaultStyles>
+      <Fill type="QString"></Fill>
+      <ColorRamp type="QString"></ColorRamp>
+      <Marker type="QString"></Marker>
+      <Opacity type="double">1</Opacity>
+      <Line type="QString"></Line>
+      <AlphaInt type="int">255</AlphaInt>
+      <RandomColors type="bool">true</RandomColors>
+    </DefaultStyles>
+    <WMSContactOrganization type="QString">OPENGIS.ch</WMSContactOrganization>
+    <Measure>
+      <Ellipsoid type="QString">bessel</Ellipsoid>
+    </Measure>
+    <WMSServiceTitle type="QString">Citybees</WMSServiceTitle>
+    <Variables>
+      <variableValues type="QStringList"/>
+      <variableNames type="QStringList"/>
+    </Variables>
+    <WMSUrl type="QString"></WMSUrl>
+    <Macros>
+      <pythonCode type="QString"></pythonCode>
+    </Macros>
+    <WMSExtent type="QStringList">
+      <value>2600294.84272</value>
+      <value>1199271.6499</value>
+      <value>2601930.25085</value>
+      <value>1200025.50303</value>
+    </WMSExtent>
+    <WCSUrl type="QString"></WCSUrl>
+    <WMSContactMail type="QString"></WMSContactMail>
+    <WMSContactPerson type="QString"></WMSContactPerson>
+    <WMSContactPhone type="QString"></WMSContactPhone>
+    <Identify>
+      <disabledLayers type="QStringList">
+        <value>National_Maps__color__58bc7f26_3099_47e2_be1d_530e13a948ba</value>
+        <value>buildings20180528134018299</value>
+        <value>landscape20180531094713934</value>
+        <value>lines20180528144355951</value>
+        <value>osm_ch_wmts_69b68051_b715_488e_939b_3a2194ab9aea</value>
+      </disabledLayers>
+    </Identify>
+    <Legend>
+      <filterByMap type="bool">false</filterByMap>
+    </Legend>
+    <WMSImageQuality type="int">90</WMSImageQuality>
+    <WFSLayers type="QStringList"/>
+    <WCSLayers type="QStringList"/>
+    <WMSKeywordList type="QStringList">
+      <value></value>
+    </WMSKeywordList>
+    <Gui>
+      <CanvasColorRedPart type="int">253</CanvasColorRedPart>
+      <SelectionColorRedPart type="int">255</SelectionColorRedPart>
+      <CanvasColorBluePart type="int">212</CanvasColorBluePart>
+      <SelectionColorGreenPart type="int">255</SelectionColorGreenPart>
+      <SelectionColorBluePart type="int">0</SelectionColorBluePart>
+      <SelectionColorAlphaPart type="int">255</SelectionColorAlphaPart>
+      <CanvasColorGreenPart type="int">240</CanvasColorGreenPart>
+    </Gui>
+    <RequiredLayers>
+      <Layers type="QStringList"/>
+    </RequiredLayers>
+    <WMSContactPosition type="QString"></WMSContactPosition>
+    <Measurement>
+      <DistanceUnits type="QString">meters</DistanceUnits>
+      <AreaUnits type="QString">m2</AreaUnits>
+    </Measurement>
+  </properties>
+  <visibility-presets/>
+  <transformContext/>
+  <Annotations/>
+  <Layouts/>
+</qgis>
